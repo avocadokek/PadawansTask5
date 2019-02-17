@@ -20,6 +20,7 @@ namespace PadawansTask5
             else { s = "No"; }
             return s;
             throw new NotImplementedException();
+            throw new ArgumentNullException();
 
         }
 
@@ -45,12 +46,12 @@ namespace PadawansTask5
                 var res = CheckIfSymmetric(mas);
                 Console.WriteLine(res);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 Console.WriteLine("Enter a positive integer number!");
                 goto link1;
             }
-
+            throw new ArgumentException();
         }
     }
 }
